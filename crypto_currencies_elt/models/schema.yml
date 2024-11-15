@@ -1,0 +1,45 @@
+
+version: 2
+
+models:
+  - name: crypto_abstract_metrics
+    description: "Final abstract table with complete crypto metric info"
+    columns:
+      - name: symbol
+        description: "Unique identifier for each crypto currency"
+        tests:
+          - not_null
+      - name: date
+        description: "Trading date"
+        tests:
+          - not_null
+      - name: price_close
+        description: "Closing price of the cryptocurrency"
+        tests:
+          - not_null
+      - name: sma_7d
+        description: "7-day Simple Moving Average of closing price"
+        tests:
+          - not_null
+      - name: rsi_7d
+        description: "7-day Relative Strength Index"
+        tests:
+          - not_null
+      - name: volume_traded
+        description: "Trading volume of the cryptocurrency trading pair"
+        tests:
+          - not_null
+      - name: trades_count
+        description: "Number of trades for the cryptocurrency"
+        tests:
+          - not_null
+      - name: price_momentum_7d 
+        description: "7-day price momentum percentage"
+        tests:
+          - not_null
+      - name: momentum_direction
+        description: "Classification of price_momentum"
+        tests:
+          - accepted_values:
+              values: ['Overbought', 'Oversold', 'Neutral']
+

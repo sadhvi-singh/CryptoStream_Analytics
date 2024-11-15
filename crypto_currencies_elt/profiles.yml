@@ -1,0 +1,13 @@
+crypto_currencies_elt:
+  outputs:
+    dev:
+      account: "{{ env_var('DBT_ACCOUNT') }}"
+      database: "{{ env_var('DBT_DATABASE') }}"
+      password: "{{ env_var('DBT_PASSWORD') }}"
+      role: "{{ env_var('DBT_ROLE') }}"
+      threads: 1
+      schema: analytics
+      type: "{{ env_var('DBT_TYPE') }}"
+      user: "{{ env_var('DBT_USER') }}"
+      warehouse: "{{ env_var('DBT_WAREHOUSE') }}"
+  target: dev

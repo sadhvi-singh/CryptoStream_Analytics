@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: raw_data
+    database: dev
+    schema: raw_data
+    description: "Schema which stores raw tables of crypto currencies(ETL)"
+    tables:
+      - name: crypto_currencies
+        identifier: crypto_currencies
+        description: "Trading data including open, high, low, close, trade count and volumes of cryptocurrencies"
+  - name: analytics
+    database: dev
+    schema: analytics
+    description: "Schema with stores analytics tables (ELT)"
+    tables:
+      - name: analysis_crypto_currencies
+        identifier: analysis_crypto_currencies
+        description: "Complete crypto metric info"
+
